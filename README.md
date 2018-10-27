@@ -148,6 +148,19 @@
 		return jsonReturn.toJSONString();
 	}
 ```
+3. crawling
+```
+public ArrayList getTitles(String page) throws IOException {
+		Document doc = Jsoup.connect("http://computer.cnu.ac.kr/index.php?mid="+page).get();
+		Element table = doc.select("table[class=bd_lst bd_tb_lst bd_tb] tbody").first();
+		Elements titles = table.select( "a" );
+		Elements times = doc.select("td[class=time]");
+		ArrayList<Elements> ele = new ArrayList<Elements>();
+		ele.add(titles);
+		ele.add(times);
+		return ele;
+	}
+```
 ## 실행 결과
 ![](./spring_kakaoBot_project/img/example.jpg)
 
