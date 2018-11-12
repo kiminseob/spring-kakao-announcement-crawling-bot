@@ -6,7 +6,7 @@
 
 ## 개발환경
 * Eclipse Java EE IDE for Web Developers.(4.9.0)
-* Spring Framework 5.1.2.RELEASE
+* Spring Framework 3.1.1 RELEASE
 * Jackson 2.8.11.1
 * jdk 8
 
